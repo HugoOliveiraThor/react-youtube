@@ -6,8 +6,9 @@ import VideoPlayer from "./components/VideoPlayer";
 
 class App extends Component {
   render() {
+    console.log('App',this)
     return (
-      <div className="App">
+      <div className="container">
        <SearchBar /> 
        <VideoList />
        <VideoPlayer />
