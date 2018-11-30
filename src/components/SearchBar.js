@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 import {Segment, Input} from 'semantic-ui-react'
+import { connect } from 'react-redux'
+import { searchByName } from "../store/actions/searchVideo"
 
 
 class SearchBar extends Component {
   search = e => {
     if(e.keyCode === 13) {
       const termo = e.target.value
+      this.props.searchByName(termo)
       console.log(termo)
     }
   }
@@ -26,4 +29,10 @@ class SearchBar extends Component {
   }
 }
 
-export default SearchBar
+const mapDispatchToProps = dispatch => {
+  return {
+    searchByName: (termo) => dispatch(searchByName(termo))
+  }
+}
+
+export default connect(null,mapDispatchToProps)(SearchBar) 

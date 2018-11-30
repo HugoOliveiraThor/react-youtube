@@ -1,5 +1,7 @@
 import youtubeSearch from 'youtube-api-v3-search'
-import ApiKey from '../../../.env'
+import {api} from '../../key'
+
+console.log('API', api)
 
 
 export const beginSearchVideo = () => {
@@ -30,7 +32,7 @@ export const searchVideoError = () =>  {
 export const searchByName = (name) => {
   return dispatch => {
     dispatch(beginSearchVideo())
-    youtubeSearch(ApiKey,{q:name})
+    youtubeSearch(api,{q:name})
     .then(data => dispatch(searchVideoSuccess(data.items)))
     .catch(() => {
       dispatch(searchVideoError())
