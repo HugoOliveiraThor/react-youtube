@@ -33,7 +33,9 @@ youtubeSearch(API_KEY,{q:'item to search'})
 
 ### Images of the projects
 
-* Index 
+* Index
+![First Screen](https://github.com/HugoOliveiraThor/react-youtube/blob/master/public/assets/github_images/primary.png)
+ 
 
 
 ## Available Scripts
