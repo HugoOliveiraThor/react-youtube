@@ -15,13 +15,14 @@ class VideoPlayer extends Component {
   }
 
   renderVideo = () => {
+    const {id:{videoId}, snippet:{description,title}} = this.props.video
     return (
       <Fragment>
-          <Embed id={this.props.video.id.videoId}
+          <Embed id={videoId}
             source='youtube'
             placeholder='' />
-          <p className='title'>{this.props.video.snippet.title}</p>
-          <p>{this.props.video.snippet.description}</p>   
+          <p className='title'>{title}</p>
+          <p>{description}</p>   
       </Fragment>
     )
   }

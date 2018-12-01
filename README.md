@@ -33,9 +33,15 @@ youtubeSearch(API_KEY,{q:'item to search'})
 
 ### Images of the projects
 
-* Index
+* Main Screen
 ![First Screen](https://github.com/HugoOliveiraThor/react-youtube/blob/master/public/assets/github_images/primary.png)
  
+* Redux Logger 
+![Redux Logger](https://github.com/HugoOliveiraThor/react-youtube/blob/master/public/assets/github_images/redux_logger.png)
+
+* How data comes from API Youtube
+![Data from Youtube](https://github.com/HugoOliveiraThor/react-youtube/blob/master/public/assets/github_images/how_data_comes_api.png)
+
 
 
 ## Available Scripts
