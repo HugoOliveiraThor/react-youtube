@@ -1,8 +1,6 @@
 import youtubeSearch from 'youtube-api-v3-search'
 import {api} from '../../key'
 
-console.log('API', api)
-
 
 export const beginSearchVideo = () => {
   return {
