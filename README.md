@@ -40,7 +40,7 @@ youtubeSearch(API_KEY,{q:'item to search'})
 ![Video selected](https://github.com/HugoOliveiraThor/react-youtube/blob/master/public/assets/github_images/playing_video.png)
 
  
-* Redux Logger 
+* Redux Logger <br/>
 ![Redux Logger](https://github.com/HugoOliveiraThor/react-youtube/blob/master/public/assets/github_images/redux_logger.png)
 
 * How data comes from API Youtube
