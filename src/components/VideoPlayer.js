@@ -8,9 +8,9 @@ class VideoPlayer extends Component {
   renderAdvertisement = () => {
     return (
       <Advertisement
-        style={{ 'height': '433px' }}
+        style={{ 'height': '100%' }}
         unit='top banner'
-        test='Escolha um vídeo para reproduzir' />
+        test='Choose a video to reproduce &#9786;' />
     )
   }
 
