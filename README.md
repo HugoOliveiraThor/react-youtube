@@ -1,7 +1,11 @@
 ## Example how to use API of youtube from Google Developers
 
+### Framework used
+[React](https://github.com/facebook/react) 
+
 ### UI used 
 [Semantic UI React](https://react.semantic-ui.com/)
+
 
 ### Dependecies used
 [Youtube Search](https://developers.google.com/youtube/v3/docs/search/list?hl=pt-br)
