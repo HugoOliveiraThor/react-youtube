@@ -7,7 +7,7 @@
 [Semantic UI React](https://react.semantic-ui.com/)
 
 
-### Dependecies used
+### Dependencies used
 [Youtube Search](https://developers.google.com/youtube/v3/docs/search/list?hl=pt-br)
 
 [React redux](https://github.com/reduxjs/redux)
