@@ -1,39 +1,51 @@
-import React  from 'react'
-import { List, Image } from 'semantic-ui-react'
+import React, {Component}  from 'react'
+import { List, Image, Dimmer, Loader } from 'semantic-ui-react'
+import { connect } from "react-redux";
 
 
-const VideoList = props => {
-  return (
-    <div className="video-list">
-      <h1>Video List</h1>
-      <List animated verticalAlign='middle'>
-      <List.Item>
-        <List.Content>
-          <List.Header>
-            Titulo do Vídeo
-          </List.Header>
-        </List.Content>
-      <Image avatar src=''></Image>
-      </List.Item>
-      <List.Item>
-        <List.Content>
-          <List.Header>
-            Titulo do Vídeo
-          </List.Header>
-        </List.Content>
-      <Image avatar src=''></Image>
-      </List.Item>
-      <List.Item>
-        <List.Content>
-          <List.Header>
-            Titulo do Vídeo
-          </List.Header>
-        </List.Content>
-      <Image avatar src=''></Image>
-      </List.Item>
+class VideoList extends Component {
+
+  renderVideo (video) {
+    return (
+      <List animated verticalAlign='middle' key={video.etag}>
+          <List.Item>
+            <List.Content>
+              <List.Header>
+                {video.snippet.title}
+            </List.Header>
+            </List.Content>
+            <Image src={video.snippet.thumbnails.default.url}></Image>
+          </List.Item>
       </List>
-    </div>
-  )
+    )
+  }
+
+  render() {
+    console.log(this.props.loading)
+    return (
+      <div className="video-list">
+      {
+        this.props.loading && (<Dimmer active inverted>
+          <Loader size='medium'>Carregando...</Loader>
+        </Dimmer>)
+      }
+      {
+        this.props.videos.map(video => {
+          return this.renderVideo(video)
+        })
+      }
+      
+      </div>
+    )
+  }
 }
 
-export default VideoList
+const mapStateToProps = state => {
+  return {
+    videos: state.search.videos,
+    loading: state.search.loading,
+    error: state.search.error
+  }
+}
+
+export default connect(mapStateToProps, null)(VideoList)
