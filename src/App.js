@@ -8,7 +8,6 @@ import VideoPlayer from "./components/VideoPlayer";
 
 class App extends Component {
   render() {
-    console.log('App', this)
     return (
       <Provider store={store}>
         <React.Fragment>
@@ -17,8 +16,8 @@ class App extends Component {
             <VideoList />
             <VideoPlayer />
           </div>
-          <div class="ui inverted vertical footer segment form-page">
-            <div class="ui container">
+          <div className="ui inverted vertical footer segment form-page">
+            <div className="ui container">
               Created by Hugo Oliveira - December 2018
             </div>
           </div>

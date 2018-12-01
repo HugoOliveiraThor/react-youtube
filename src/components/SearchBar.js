@@ -14,7 +14,6 @@ class SearchBar extends Component {
     if(e.keyCode === 13) {
       const termo = e.target.value
       this.props.searchByName(termo)
-      console.log(termo)
     }
   }
 
