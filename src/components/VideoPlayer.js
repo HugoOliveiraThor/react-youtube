@@ -27,7 +27,6 @@ class VideoPlayer extends Component {
   }
 
   render () {
-    console.log('props', this.props)
     return (
       <div className="video-player">
         {this.props.video.id ?  this.renderVideo() : this.renderAdvertisement()}
